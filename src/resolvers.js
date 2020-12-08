@@ -8,6 +8,8 @@ module.exports = {
         user: (_, { id }) => users[id],
     },
     Mutation: {
-        createUser: (_, { id, name, email }) => users.push({ id, name, email })
+        createUser: (_, { id, name, email }) => {
+            users.push({ id, name, email })
+        }
     }
 }
